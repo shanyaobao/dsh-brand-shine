@@ -1,0 +1,62 @@
+{
+  "name": "dsh-brand-shine",
+  "version": "0.1.0",
+  "description": "替换DSH侧边栏品牌标识为自定义公司名+Logo，支持到更多-品牌设置调整",
+  "type": "module",
+  "main": "lib/index.js",
+  "icon": "assets/logo.png",
+  "author": "闪耀吧 <zhuzai@163.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shanyaobao/dsh-brand-shine.git"
+  },
+  "homepage": "https://github.com/shanyaobao/dsh-brand-shine#readme",
+  "bugs": {
+    "url": "https://github.com/shanyaobao/dsh-brand-shine/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "assets/",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "brand",
+    "white-label",
+    "customization",
+    "branding"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-primitives",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ],
+      "external": [
+        "react-dom"
+      ],
+      "platform": "web"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.1"
+  }
+}

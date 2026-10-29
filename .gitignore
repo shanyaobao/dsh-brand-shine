@@ -1,0 +1,7 @@
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+# 开发本地临时文件
+*.tmp
+*.bak

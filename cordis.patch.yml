@@ -1,0 +1,5 @@
+# dsh bundle patch：把品牌替换插件插进 profile 的图层栈。
+# 安装后从「插件」页可单独开关，也可在 profile 的 cordis.patch.yml 里按 id 覆盖配置。
+- insert:
+    - id: brand-shine
+      name: dsh-brand-shine
